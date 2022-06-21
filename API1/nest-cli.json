@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/api-app/src",
+  "monorepo": true,
+  "root": "apps/api-app",
+  "projects": {
+    "api-app": {
+      "type": "application",
+      "root": "apps/api-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/api-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/api-app/tsconfig.app.json"
+      }
+    },
+    "pg-library": {
+      "type": "library",
+      "root": "libs/pg-library",
+      "entryFile": "index",
+      "sourceRoot": "libs/pg-library/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/pg-library/tsconfig.lib.json"
+      }
+    },
+    "mssql-library": {
+      "type": "library",
+      "root": "libs/mssql-library",
+      "entryFile": "index",
+      "sourceRoot": "libs/mssql-library/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/mssql-library/tsconfig.lib.json"
+      }
+    }
+  }
+}

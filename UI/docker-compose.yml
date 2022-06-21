@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  app:
+    container_name: app-ui
+    image: app-ui
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 3000:3000
+    networks:
+      - api-network
+
+networks:
+  api-network:
+    name: api-network
+    external: true
+

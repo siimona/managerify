@@ -1,0 +1,152 @@
+entity: ProductMob
+items:
+  product-mob1:
+    name: 'Cabinet'
+    description: 'this product is very good, white, 1x1'
+    price: 250
+    sku: 'sku-432432'
+    unit: 'kg'
+    weight: 2
+    provider: 'Mobital'
+    sent: true
+    category: cabinets
+  product-mob2:
+    name: 'Chair'
+    description: 'good quality, black'
+    price: 500
+    sku: 'sku-552'
+    unit: 'kg'
+    weight: 2
+    provider: 'Mobital'
+    sent: true
+    category: chairs
+  product-mob3:
+    name: 'Desk'
+    description: 'dark brown'
+    price: 60
+    sku: 'sku-663'
+    unit: 'kg'
+    weight: 5
+    provider: 'Mobital'
+    sent: true
+    category: desks
+  product-mob4:
+    name: 'Sofa'
+    description: 'black, comfy, suitable for living room'
+    price: 60
+    sku: 'sku-4544'
+    unit: 'kg'
+    weight: 5
+    provider: 'Mobital'
+    sent: true
+    category: sofas
+  product-mob5:
+    name: 'Slipcover'
+    description: 'good quality, white'
+    price: 60
+    sku: 'sku-45454'
+    unit: 'kg'
+    weight: 5
+    provider: 'Mobital'
+    sent: true
+    category: sofas
+  product-mob6:
+    name: 'Table'
+    description: 'this product is very good'
+    price: 340
+    sku: 'sku-43354'
+    unit: 'kg'
+    weight: 2
+    provider: 'Mobital'
+    sent: true
+    category: desks
+  product-mob7:
+    name: 'Chair2'
+    description: 'this product is very good, black, comfy'
+    price: 500
+    sku: 'sku-56545446'
+    unit: 'kg'
+    weight: 2
+    provider: 'Mobital'
+    sent: true
+    category: chairs
+  product-mob8:
+    name: 'Desk2'
+    description: 'dark brown, good quality'
+    price: 60
+    sku: 'sku-798439'
+    unit: 'kg'
+    weight: 5
+    provider: 'Mobital'
+    sent: true
+    category: desks
+  product-mob9:
+    name: 'Desk3'
+    description: 'good quality, black'
+    price: 60
+    sku: 'sku-3354'
+    unit: 'kg'
+    weight: 5
+    provider: 'Mobital'
+    sent: true
+    category: desks
+  product-mob10:
+    name: 'Sofa2'
+    description: 'good quality, white, comfy and pretty'
+    price: 60
+    sku: 'sku-793867'
+    unit: 'kg'
+    weight: 5
+    provider: 'Mobital'
+    sent: true
+    category: sofas
+  product-mob11:
+    name: 'Cabinet for living room'
+    description: 'this product is very good'
+    price: 340
+    sku: 'sku-4536546'
+    unit: 'kg'
+    weight: 2
+    provider: 'Mobital'
+    sent: true
+    category: cabinets
+  product-mob12:
+    name: 'TV Table'
+    description: 'good for living room'
+    price: 500
+    sku: 'sku-46524'
+    unit: 'kg'
+    weight: 2
+    provider: 'Mobital'
+    sent: true
+    category: desks
+  product-mob13:
+    name: 'Coffe Table'
+    description: 'good quality, dark brown'
+    price: 60
+    sku: 'sku-5424'
+    unit: 'kg'
+    weight: 5
+    provider: 'Mobital'
+    sent: true
+    category: desks
+  product-mob14:
+    name: 'Coffe Table2'
+    description: 'good quality, black'
+    price: 60
+    sku: 'sku-542542'
+    unit: 'kg'
+    weight: 5
+    provider: 'Mobital'
+    sent: true
+    category: desks
+  product-mob15:
+    name: 'Comfy Sofa'
+    description: 'good quality, white, really comfy'
+    price: 60
+    sku: 'sku-4543'
+    unit: 'kg'
+    weight: 5
+    provider: 'Mobital'
+    sent: true
+    category: sofas

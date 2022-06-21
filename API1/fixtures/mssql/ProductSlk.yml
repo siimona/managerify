@@ -1,0 +1,47 @@
+entity: ProductSlk
+items:
+  product-slk1:
+    name: 'Table'
+    info: 'this product is very good'
+    price: 340
+    sku: 'sku-456546'
+    stock: 20
+    weight: 2
+    provider: 'Slk Home'
+    category: desks
+  product-slk2:
+    name: 'Chair'
+    info: 'this product is very good'
+    price: 500
+    sku: 'sku-56546'
+    stock: 40
+    weight: 2
+    provider: 'Slk Home'
+    category: chairs
+  product-slk3:
+    name: 'Desk'
+    info: 'good quality, dark brown'
+    price: 60
+    sku: 'sku-7989'
+    stock: 60
+    weight: 5
+    provider: 'Slk Home'
+    category: desks
+  product-slk4:
+    name: 'Desk 2'
+    info: 'good quality, black'
+    price: 60
+    sku: 'sku-798977'
+    stock: 60
+    weight: 5
+    provider: 'Slk Home'
+    category: desks
+  product-slk5:
+    name: 'Desk 3'
+    info: 'good quality, white'
+    price: 60
+    sku: 'sku-79867'
+    stock: 10
+    weight: 5
+    provider: 'Slk Home'
+    category: desks

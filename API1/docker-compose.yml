@@ -1,0 +1,94 @@
+version: '3'
+services: 
+   postgres-db:
+    image: postgres
+    restart: always
+    environment: 
+      - POSTGRES_USER=${POSTGRES_DATABASE_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_DATABASE_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB_NAME}
+    container_name: postgres-db
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    networks:
+      - api-network
+      
+   nestjs:
+    build: 
+      context: .
+      dockerfile: ./Dockerfile
+    image: tusharchy/nest-and-postgres-application:latest
+    environment: 
+      - DB_TYPE=${POSTGRES_DB_TYPE}
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_USER=${POSTGRES_DATABASE_USER}
+      - POSTGRES_PASS=${POSTGRES_DATABASE_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB_NAME}
+      - POSTGRES_SYNC=false
+      - POSTGRES_PORT=${POSTGRES_PORT}
+      - APP_PORT=${APP_PORT}
+      - DATABASE_PUBLIC_URL=sql-server-db
+      - REDIS_HOST=myredis
+      - REDIS_PORT=6379
+    ports: 
+      - "4200:4200"
+    container_name: api_1
+    depends_on: 
+      - postgres-db
+      - sql-server-db
+    env_file:
+      - .env
+    volumes: 
+      - .:/app
+      - node-modules-data:/app/node_modules
+    networks:
+      - api-network
+    links:
+      - myredis
+
+   pgadmin:
+    image: dpage/pgadmin4
+    restart: always
+    container_name: nest-pgadmin4
+    environment: 
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+      - PGADMIN_LISTEN_PORT=${PGADMIN_LISTEN_PORT}
+    ports: 
+      - "8080:80"
+    volumes: 
+      - pgadmin-data:/var/lib/pgadmin
+    depends_on: 
+      - postgres-db
+      - myredis
+    networks:
+      - api-network
+
+   sql-server-db:
+    container_name: sql-server-db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    restart: always
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - MSSQL_SA_PASSWORD=${MSSQL_DB_PASSWORD}
+      - MSSQL_PID=Developer
+    networks:
+      - api-network
+    volumes:
+      - mssqldata:/var/opt/mssql    
+
+
+volumes:
+  pgdata:
+  pgadmin-data:
+  node-modules-data:
+  mssqldata:
+  cache:
+  
+networks:
+  api-network:
+   name: api-network
