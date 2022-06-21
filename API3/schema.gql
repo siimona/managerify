@@ -1,0 +1,148 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  """id"""
+  id: String!
+
+  """createdOn"""
+  createdOn: DateTime!
+
+  """modifiedOn"""
+  modifiedOn: DateTime!
+
+  """name"""
+  name: String!
+
+  """email"""
+  email: String!
+
+  """password"""
+  password: String!
+
+  """phone"""
+  phone: String!
+}
+
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Product {
+  """id"""
+  id: String!
+
+  """createdOn"""
+  createdOn: DateTime!
+
+  """modifiedOn"""
+  modifiedOn: DateTime!
+
+  """name"""
+  name: String!
+
+  """description"""
+  description: String!
+
+  """price"""
+  price: Int!
+
+  """sku"""
+  sku: String!
+
+  """weight"""
+  weight: Int!
+
+  """provider"""
+  provider: String!
+
+  """unit"""
+  unit: String!
+
+  """stock"""
+  stock: Int!
+}
+
+type Query {
+  user(id: String!): User!
+  products: [Product!]!
+  product(id: String!): Product!
+}
+
+type Mutation {
+  createUser(createUserInput: CreateUserInput!): User!
+  createProduct(createProductInput: CreateProductInput!): Product!
+  updateProduct(updateProductInput: UpdateProductInput!): Product!
+  removeProduct(id: String!): Product!
+}
+
+input CreateUserInput {
+  """name"""
+  name: String!
+
+  """email"""
+  email: String!
+
+  """password"""
+  password: String!
+
+  """phone"""
+  phone: String!
+}
+
+input CreateProductInput {
+  """name"""
+  name: String!
+
+  """description"""
+  description: String!
+
+  """price"""
+  price: Int!
+
+  """sku"""
+  sku: String!
+
+  """weight"""
+  weight: Int!
+
+  """provider"""
+  provider: String!
+
+  """unit"""
+  unit: String!
+
+  """stock"""
+  stock: Int!
+}
+
+input UpdateProductInput {
+  """name"""
+  name: String!
+
+  """description"""
+  description: String!
+
+  """price"""
+  price: Int!
+
+  """sku"""
+  sku: String!
+
+  """weight"""
+  weight: Int!
+
+  """provider"""
+  provider: String!
+
+  """unit"""
+  unit: String!
+
+  """stock"""
+  stock: Int!
+
+  """id"""
+  id: String!
+}
